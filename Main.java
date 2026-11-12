@@ -7,21 +7,21 @@ public class Main {
         Calculator calculator = new Calculator();
 
         try {
-            System.out.println("=== JAVA CALCULATOR ===");
+            System.out.println("=== CALCULATOR ===");
 
-            System.out.print("Введите первое число: ");
+            System.out.print("Введіть перше число: ");
             double a = Double.parseDouble(scanner.nextLine());
 
-            System.out.print("Введите второе число: ");
+            System.out.print("Введіть друге число: ");
             double b = Double.parseDouble(scanner.nextLine());
 
-            System.out.println("\nВыберите операцию:");
-            System.out.println("+  Сложение");
-            System.out.println("-  Вычитание");
-            System.out.println("*  Умножение");
-            System.out.println("/  Деление");
+            System.out.println("\nВыберіть операцію:");
+            System.out.println("+  Додавання");
+            System.out.println("-  Віднімання");
+            System.out.println("*  Множення");
+            System.out.println("/  Ділення");
 
-            System.out.print("Операция: ");
+            System.out.print("Операція: ");
             String operation = scanner.nextLine();
 
             double result;
@@ -45,7 +45,7 @@ public class Main {
 
                 default:
                     throw new InvalidInputException(
-                        "Неизвестная операция!"
+                        "Невдома операція!"
                     );
             }
 
@@ -53,18 +53,18 @@ public class Main {
 
         } catch (NumberFormatException e) {
             System.out.println(
-                "Ошибка: необходимо вводить числа!"
+                "Помилка: необхідно вводити числа!"
             );
 
         } catch (ArithmeticException e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            System.out.println("Помилка: " + e.getMessage());
 
         } catch (InvalidInputException e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            System.out.println("Помилка: " + e.getMessage());
 
         } finally {
             System.out.println(
-                "\nОбработка запроса завершена."
+                "\nОбробка запиту завершена."
             );
             scanner.close();
         }

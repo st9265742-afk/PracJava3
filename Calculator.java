@@ -1,5 +1,4 @@
 public class Calculator {
-     // Проверка входных данных
     private void validateInput(double a, double b)
             throws InvalidInputException {
 
@@ -18,7 +17,6 @@ public class Calculator {
         return a + b;
     }
 
-    // Вычитание
     public double subtract(double a, double b)
             throws InvalidInputException {
 
@@ -26,7 +24,6 @@ public class Calculator {
         return a - b;
     }
 
-    // Умножение
     public double multiply(double a, double b)
             throws InvalidInputException {
 
@@ -34,7 +31,6 @@ public class Calculator {
         return a * b;
     }
 
-    // Деление
     public double divide(double a, double b)
             throws InvalidInputException {
 
